@@ -119,11 +119,52 @@
     .contact-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:16px}
 
     /* Etiquetas por categoría en tarjetas */
-    .tag-aws::after{background:linear-gradient(90deg,#FF9900,#232F3E)}
+    /*.tag-aws::after{background:linear-gradient(90deg,#FF9900,#232F3E)}
     .tag-iac::after{background:linear-gradient(90deg,#5c4ee5,#00d4ff)}
     .tag-ci-cd::after{background:linear-gradient(90deg,#24292e,#2ea043)}
     .tag-observabilidad::after{background:linear-gradient(90deg,#f07,#ffb703)}
-    .tag-docker::after{background:linear-gradient(90deg,#0db7ed,#384d54)}
+    .tag-docker::after{background:linear-gradient(90deg,#0db7ed,#384d54)}*/
+
+    /* AWS */
+.tag-aws{
+  background:linear-gradient(135deg,#FF9900,#232F3E);
+  color:#fff;                 /* Texto blanco */
+}
+.tag-aws h3, .tag-aws p{color:#fff}
+.tag-aws .links a{color:#ffe7b3}
+
+/* IaC */
+.tag-iac{
+  background:linear-gradient(135deg,#5c4ee5,#00d4ff);
+  color:#fff;
+}
+.tag-iac h3, .tag-iac p{color:#fff}
+.tag-iac .links a{color:#e0f0ff}
+
+/* CI/CD */
+.tag-ci-cd{
+  background:linear-gradient(135deg,#24292e,#2ea043);
+  color:#fff;
+}
+.tag-ci-cd h3, .tag-ci-cd p{color:#fff}
+.tag-ci-cd .links a{color:#d0ffd6}
+
+/* Observabilidad */
+.tag-observabilidad{
+  background:linear-gradient(135deg,#f07,#ffb703);
+  color:#fff;
+}
+.tag-observabilidad h3, .tag-observabilidad p{color:#fff}
+.tag-observabilidad .links a{color:#fff8d6}
+
+/* Docker */
+.tag-docker{
+  background:linear-gradient(135deg,#0db7ed,#384d54);
+  color:#fff;
+}
+.tag-docker h3, .tag-docker p{color:#fff}
+.tag-docker .links a{color:#c8f6ff}
+
 
     footer{padding:32px 0;color:var(--muted)}
 
