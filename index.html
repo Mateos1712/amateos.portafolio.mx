@@ -18,6 +18,7 @@
   <link rel="icon" href="/assets/favicon.ico" />
   <!-- Iconos de tecnologías (Devicon) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
   <style>
     /* ==================== Base & Tema ==================== */
     :root{
@@ -49,7 +50,6 @@
         --code:#e6edf7;
         --shadow:0 14px 44px rgba(0,0,0,.45);
       }
-    }
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -133,6 +133,7 @@
       .about-grid{grid-template-columns:1fr}
     }
   </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -145,6 +146,15 @@
       "https://github.com/Mateos1712"
     ]
   }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M222LKW5N5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-M222LKW5N5');
   </script>
 </head>
 <body>
@@ -172,7 +182,7 @@
         <h1 id="hero-title">Ingeniero DevOps — AWS · Terraform · Docker · CI/CD</h1>
         <p class="lead">Construyo e integro plataformas confiables de entrega continua, automatización de infraestructura y observabilidad. Me enfoco en impacto, simplicidad y seguridad.</p>
         <div class="actions">
-          <a class="btn primary" href="https://github.com/andresmateos" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn primary" href="https://github.com/Mateos1712" target="_blank" rel="noopener">GitHub</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/andres-mateos-8192822a1" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn ghost" href="mailto:andres.mateos@example.com">Contáctame</a>
         </div>
@@ -234,16 +244,16 @@
       <h2 id="contact-title">Contacto</h2>
       <div class="contact-cards">
         <div class="contact-card">
-          <h3>Correo</h3>
+          <h3>Email</h3>
           <p><a href="mailto:andres.mateos@example.com">andres.mateos@example.com</a></p>
         </div>
         <div class="contact-card">
           <h3>LinkedIn</h3>
-          <p><a href="https://www.linkedin.com/in/andres-mateos-8192822a1" target="_blank" rel="noopener">linkedin.com/in/andresmateos</a></p>
+          <p><a href="https://www.linkedin.com/in/andres-mateos-8192822a1" target="_blank" rel="noopener">linkedin.com/in/andres-mateos-8192822a1</a></p>
         </div>
         <div class="contact-card">
           <h3>GitHub</h3>
-          <p><a href="https://github.com/andresmateos" target="_blank" rel="noopener">github.com/andresmateos</a></p>
+          <p><a href="https://github.com/Mateos1712" target="_blank" rel="noopener">github.com/Mateos1712</a></p>
         </div>
       </div>
     </section>
@@ -266,11 +276,11 @@
         desc: 'Build + test + despliegue a GitHub Pages con matrices y caché de dependencias.',
         tags: ['ci-cd'],
         stack: ['GitHub Actions','Node','Docker'],
-        repo: 'https://github.com/andresmateos/ci-cd-actions-demo',
-        demo: 'https://andresmateos.github.io/ci-cd-actions-demo/',
+        repo: 'https://github.com/Mateos1712/ci-cd-actions-demo',
+        demo: 'https://mateos1712.github.io/ci-cd-actions-demo/',
         image: 'assets/ci-cd-cover.jpg',
         badges: [
-          'https://img.shields.io/github/actions/workflow/status/andresmateos/ci-cd-actions-demo/ci.yml?label=CI'
+          'https://img.shields.io/github/actions/workflow/status/Mateos1712/ci-cd-actions-demo/ci.yml?label=CI'
         ]
       },
       {
@@ -278,7 +288,7 @@
         desc: 'VPC + subnets + EC2 + RDS + S3 con módulos reutilizables y remote state.',
         tags: ['aws','iac'],
         stack: ['Terraform','AWS','VPC','EC2','RDS','S3'],
-        repo: 'https://github.com/andresmateos/aws-terraform-stack',
+        repo: 'https://github.com/Mateos1712/aws-terraform-stack',
         docs: 'projects/aws-terraform-stack.html',
         image: 'assets/aws-tf-cover.jpg'
       },
@@ -287,7 +297,7 @@
         desc: 'Exporters + dashboards + alertas para una app contenedorizada.',
         tags: ['observabilidad','docker'],
         stack: ['Prometheus','Grafana','Docker','Alertmanager'],
-        repo: 'https://github.com/andresmateos/observability-stack',
+        repo: 'https://github.com/Mateos1712/observability-stack',
         image: 'assets/observability-cover.jpg'
       },
       {
@@ -295,7 +305,7 @@
         desc: 'Dockerfile multietapa, Compose y buenas prácticas de imagen.',
         tags: ['docker'],
         stack: ['Docker','Flask','Compose'],
-        repo: 'https://github.com/andresmateos/flask-docker-demo',
+        repo: 'https://github.com/Mateos1712/flask-docker-demo',
         demo: '#',
         image: 'assets/flask-docker-cover.jpg'
       }
@@ -324,7 +334,7 @@
 
     function iconify(name){
       const cls = iconMap[name] || '';
-      return cls ? `<i class=\"${cls}\" aria-hidden=\"true\"></i><span>${name}</span>` : `<span>${name}</span>`;
+      return cls ? `<i class="${cls}" aria-hidden="true"></i><span>${name}</span>` : `<span>${name}</span>`;
     }
 
     function render(list){
@@ -336,15 +346,15 @@
         if(mainTag) card.classList.add(mainTag);
         card.setAttribute('data-tags', (p.tags||[]).join(' '));
         card.innerHTML = `
-          ${p.image ? `<img class=\"thumb\" src=\"${p.image}\" alt=\"${p.title}\" loading=\"lazy\"/>` : ''}
+          ${p.image ? `<img class="thumb" src="${p.image}" alt="${p.title}" loading="lazy"/>` : ''}
           <h3>${p.title}</h3>
           <p>${p.desc}</p>
-          <div class=\"meta\">${(p.stack||[]).map(s=>`<span class=\"chip\">${iconify(s)}</span>`).join('')}</div>
-          ${p.badges ? `<div class=\"meta\">${p.badges.map(src=>`<img src=\"${src}\" alt=\"badge\" height=\"20\" loading=\"lazy\"/>`).join('')}</div>`:''}
-          <div class=\"links\">
-            ${p.repo ? `<a class=\"btn ghost\" href=\"${p.repo}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Repositorio de ${p.title}\">Repo</a>`:''}
-            ${p.demo ? `<a class=\"btn ghost\" href=\"${p.demo}\" target=\"_blank\" rel=\"noopener\" aria-label=\"Demo de ${p.title}\">Demo</a>`:''}
-            ${p.docs ? `<a class=\"btn ghost\" href=\"${p.docs}\" aria-label=\"Documentación de ${p.title}\">Docs</a>`:''}
+          <div class="meta">${(p.stack||[]).map(s=>`<span class="chip">${iconify(s)}</span>`).join('')}</div>
+          ${p.badges ? `<div class="meta">${p.badges.map(src=>`<img src="${src}" alt="badge" height="20" loading="lazy"/>`).join('')}</div>`:''}
+          <div class="links">
+            ${p.repo ? `<a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener" aria-label="Repositorio de ${p.title}">Repo</a>`:''}
+            ${p.demo ? `<a class="btn ghost" href="${p.demo}" target="_blank" rel="noopener" aria-label="Demo de ${p.title}">Demo</a>`:''}
+            ${p.docs ? `<a class="btn ghost" href="${p.docs}" aria-label="Documentación de ${p.title}">Docs</a>`:''}
           </div>
         `;
         grid.appendChild(card);
