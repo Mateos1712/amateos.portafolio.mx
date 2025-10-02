@@ -1,16 +1,26 @@
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Andrés Mateos",
-    "url": "https://andresmateos.github.io/",
-    "jobTitle": "DevOps Engineer",
-    "sameAs": [
-      "https://www.linkedin.com/in/andres-mateos-8192822a1",
-      "https://github.com/Mateos1712"
-    ]
-  }
-  </script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Andrés Mateos · Portafolio DevOps</title>
+  <meta name="description" content="Portafolio profesional de Andrés Mateos — DevOps, Cloud, Automatización y Observabilidad. Proyectos con AWS, Terraform, Docker, CI/CD y más." />
+  <link rel="canonical" href="https://andresmateos.github.io/" />
+  <meta name="theme-color" content="#0a192f" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Andrés Mateos · Portafolio DevOps" />
+  <meta property="og:description" content="Proyectos de DevOps, Cloud y Automatización." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://andresmateos.github.io/" />
+  <meta property="og:image" content="/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/favicon.ico" />
+
+  <!-- Devicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M222LKW5N5"></script>
@@ -19,6 +29,102 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-M222LKW5N5');
+    // Configuración básica de GA
+    gtag('config', 'G-M222LKW5N5', { 'anonymize_ip': true });
   </script>
+
+  <style>
+    /* === Estilos resumidos (igual que antes) === */
+    body { margin:0; font-family: sans-serif; background:#0b1220; color:#e6edf7; line-height:1.6 }
+    header { background:#0a192f; color:#fff; padding:1rem; position:sticky; top:0 }
+    header nav { display:flex; justify-content:space-between; align-items:center }
+    ul.nav { list-style:none; display:flex; gap:1rem; margin:0; padding:0 }
+    ul.nav a { color:#64ffda; text-decoration:none; font-weight:bold }
+    section { padding:3rem 1rem; border-bottom:1px solid #1f2a44 }
+    h1,h2,h3 { margin:0 0 1rem }
+    .btn { display:inline-block; padding:0.6rem 1rem; border-radius:8px; border:1px solid #64ffda; color:#64ffda; text-decoration:none; transition:0.2s }
+    .btn:hover { background:#64ffda; color:#0a192f }
+    footer { text-align:center; padding:1rem; color:#9fb1d1 }
+  </style>
 </head>
+<body>
+  <header>
+    <nav>
+      <div><strong>Andrés Mateos</strong></div>
+      <ul class="nav">
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- Hero -->
+    <section id="hero">
+      <h1>¡Hola! Soy Andrés Mateos 👋</h1>
+      <p class="lead">Ingeniero DevOps con experiencia en AWS, Terraform, Docker, Linux y CI/CD. Apasionado por la automatización y la nube.</p>
+      <div class="actions">
+        <a href="https://github.com/andresmateos" target="_blank" class="btn primary" id="btn-github">GitHub</a>
+        <a href="https://www.linkedin.com/in/andresmateos" target="_blank" class="btn ghost" id="btn-linkedin">LinkedIn</a>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Actualmente trabajo en integración y despliegue de soluciones en entornos Linux y Oracle. Manejo CI/CD, infraestructura como código y prácticas de observabilidad.</p>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="projects">
+      <h2>Proyectos</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Infraestructura AWS con Terraform</h3>
+          <p>Creación de una VPC con subredes públicas/privadas, EC2, RDS y balanceador ALB, todo definido en Terraform.</p>
+        </div>
+        <div class="card">
+          <h3>Automatización con Jenkins</h3>
+          <p>Pipeline CI/CD para despliegue automatizado de microservicios en contenedores Docker.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>¿Quieres colaborar conmigo? Escríbeme en mis redes:</p>
+      <p>
+        <a href="mailto:andres.mateos@gmail.com" class="btn">📧 Email</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="y"></span> Andrés Mateos · Portafolio</small>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Tracking de eventos personalizados en GA4
+    document.getElementById("btn-github").addEventListener("click", function() {
+      gtag('event', 'click', {
+        'event_category': 'Botón',
+        'event_label': 'GitHub',
+        'value': 1
+      });
+    });
+
+    document.getElementById("btn-linkedin").addEventListener("click", function() {
+      gtag('event', 'click', {
+        'event_category': 'Botón',
+        'event_label': 'LinkedIn',
+        'value': 1
+      });
+    });
+  </script>
+</body>
+</html>
