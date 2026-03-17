@@ -25,3 +25,20 @@ body {
   line-height: 1.6;
   transition: background 0.3s, color 0.3s;
 }
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--accent-dark);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: white;
+}
