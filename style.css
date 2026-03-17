@@ -26,6 +26,8 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+/* BOTONES GENERALES */
+
 .btn {
   padding: 8px 14px;
   border-radius: 6px;
@@ -33,12 +35,32 @@ body {
   cursor: pointer;
   font-weight: 500;
   background-color: var(--accent-dark);
-  color: white;
+  color: #ffffff;
   transition: all 0.2s ease;
 }
+
+/* BOTONES DEL FILTRO DE PROYECTOS */
 
 .btn.ghost {
   background: transparent;
   border: 1px solid var(--accent);
-  color: white;
+  color: #ffffff;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.btn:hover {
+  background-color: var(--accent);
+  color: #0b1220;
+}
+
+.btn.ghost:hover {
+  background-color: var(--accent);
+  color: #0b1220;
+}
+
+/* CONTENEDOR DE LOS FILTROS */
+
+.filters button {
+  color: #ffffff;
 }
