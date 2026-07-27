@@ -1,0 +1,16 @@
+{
+  "name": "Andrés Mateos | Cloud & DevOps",
+  "short_name": "AM Cloud",
+  "description": "Portafolio profesional de Andrés Mateos.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
