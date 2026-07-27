@@ -12,6 +12,7 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 - Secciones de trayectoria, stack, proyectos y contacto.
 - Contenido profesional con posicionamiento honesto.
 - Tarjetas preparadas para futuros proyectos de AWS, Terraform, Bash, Python y CI/CD.
+- Diagramas conceptuales generados para cada proyecto y optimizados en WebP.
 - SEO técnico, datos estructurados, Open Graph, Twitter Cards, canonical, sitemap y favicon.
 - Sin repositorios ficticios ni enlaces vacíos.
 - Animaciones discretas con soporte para `prefers-reduced-motion`.
@@ -28,6 +29,13 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 ```text
 .
 ├── assets/
+│   ├── projects/
+│   │   ├── project-aws-architecture.webp
+│   │   ├── project-bash-automation.webp
+│   │   ├── project-cicd.webp
+│   │   ├── project-portfolio.webp
+│   │   ├── project-python-automation.webp
+│   │   └── project-terraform.webp
 │   ├── apple-touch-icon.png
 │   ├── favicon-32.png
 │   ├── favicon.svg
@@ -42,6 +50,8 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 ├── style.css
 └── robots.txt
 ```
+
+Las imágenes de proyectos son ilustraciones conceptuales generadas con IA. Ayudan a comunicar la intención técnica de cada proyecto futuro, pero no representan infraestructura actualmente desplegada.
 
 ## Ejecutar localmente
 
