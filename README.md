@@ -11,8 +11,9 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 - Modo claro y oscuro con persistencia local.
 - Secciones de trayectoria, stack, proyectos y contacto.
 - Contenido profesional con posicionamiento honesto.
-- Tarjetas preparadas para futuros proyectos de AWS, Terraform, Bash, Python y CI/CD.
-- Diagramas conceptuales generados para cada proyecto y optimizados en WebP.
+- Proyectos reales de AWS, Terraform, contenedores, CI/CD y observabilidad.
+- Tarjetas preparadas para futuros proyectos de Bash, Python y CI/CD.
+- Diagramas de arquitectura generados para cada proyecto y optimizados en WebP.
 - SEO técnico, datos estructurados, Open Graph, Twitter Cards, canonical, sitemap y favicon.
 - Sin repositorios ficticios ni enlaces vacíos.
 - Animaciones discretas con soporte para `prefers-reduced-motion`.
@@ -32,7 +33,9 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 │   ├── projects/
 │   │   ├── project-aws-architecture.webp
 │   │   ├── project-bash-automation.webp
+│   │   ├── project-campus-pulse.webp
 │   │   ├── project-cicd.webp
+│   │   ├── project-cloudvault.webp
 │   │   ├── project-portfolio.webp
 │   │   ├── project-python-automation.webp
 │   │   └── project-terraform.webp
@@ -51,7 +54,13 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 └── robots.txt
 ```
 
-Las imágenes de proyectos son ilustraciones conceptuales generadas con IA. Ayudan a comunicar la intención técnica de cada proyecto futuro, pero no representan infraestructura actualmente desplegada.
+Las imágenes de proyectos son ilustraciones conceptuales generadas con IA. En CloudVault y Campus Pulse resumen componentes presentes en sus repositorios; no prueban por sí mismas que la infraestructura esté desplegada. Las tarjetas marcadas como `Próximamente` representan la hoja de ruta.
+
+## Proyectos incluidos
+
+- [CloudVault AWS](https://github.com/Mateos1712/cloudvault-aws): VPC en dos zonas, subredes públicas y privadas, EC2 con Nginx y un bucket S3 privado con versionado y cifrado, definido con Terraform.
+- [Campus Pulse Cloud Platform](https://github.com/Mateos1712/campuspulse-cloud-platform): laboratorio DevOps en desarrollo con API instrumentada, Docker, CI/CD, Terraform para ECS Fargate, manifiestos Kubernetes y observabilidad con Prometheus y Grafana.
+- [Portafolio Cloud & DevOps](https://github.com/Mateos1712/amateos.portafolio.mx): este sitio, construido con HTML, CSS y JavaScript sin frameworks.
 
 ## Ejecutar localmente
 

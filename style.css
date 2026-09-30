@@ -958,6 +958,25 @@ h3 {
   box-shadow: 0 0 9px #5eead4;
 }
 
+.status-progress {
+  color: #7a4200;
+  background: rgba(245, 180, 68, 0.18);
+  border-color: rgba(245, 180, 68, 0.32);
+}
+
+:root[data-theme="dark"] .status-progress {
+  color: #f6d58a;
+  background: rgba(120, 70, 10, 0.2);
+}
+
+.status-progress i {
+  width: 6px;
+  height: 6px;
+  background: #f5b444;
+  border-radius: 50%;
+  box-shadow: 0 0 9px rgba(245, 180, 68, 0.78);
+}
+
 .project-highlights {
   display: flex;
   flex-wrap: wrap;

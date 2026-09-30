@@ -47,7 +47,7 @@
     <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <link rel="stylesheet" href="style.css?v=2.1.1" />
+    <link rel="stylesheet" href="style.css?v=2.2.0" />
 
     <script>
       document.documentElement.classList.add("js");
@@ -343,8 +343,8 @@
               <h2 id="projects-title">Proyectos</h2>
             </div>
             <p>
-              Un repositorio real y una hoja de ruta pública. Las tarjetas “próximamente” no
-              enlazan a proyectos que todavía no existen.
+              Tres repositorios públicos con trabajo verificable y una hoja de ruta honesta. Las
+              tarjetas “próximamente” no enlazan a proyectos que todavía no existen.
             </p>
           </div>
 
@@ -390,8 +390,8 @@
             <article class="project-card" data-reveal>
               <figure class="project-visual">
                 <img
-                  src="assets/projects/project-aws-architecture.webp"
-                  alt="Diagrama conceptual de una arquitectura cloud segura"
+                  src="assets/projects/project-cloudvault.webp"
+                  alt="Diagrama conceptual de la arquitectura AWS de CloudVault"
                   width="1280"
                   height="720"
                   loading="lazy"
@@ -400,19 +400,30 @@
               </figure>
               <div class="project-topline">
                 <span class="project-number">02</span>
-                <span class="status">Próximamente</span>
+                <span class="status status-live"><i></i> Repositorio público</span>
               </div>
-              <p class="project-type">AWS</p>
-              <h3>Arquitectura web segura en AWS</h3>
-              <p>Diseño documentado de red, cómputo, almacenamiento, observabilidad y seguridad.</p>
-              <div class="tag-list"><span>VPC</span><span>EC2</span><span>S3</span><span>IAM</span></div>
+              <p class="project-type">AWS · Terraform</p>
+              <h3>CloudVault — infraestructura AWS segura</h3>
+              <p>
+                Infraestructura reproducible con VPC en dos zonas, subredes públicas y privadas,
+                EC2 con Nginx y S3 cifrado, versionado y sin acceso público.
+              </p>
+              <div class="tag-list"><span>Terraform</span><span>VPC</span><span>EC2</span><span>S3</span></div>
+              <a
+                class="project-link"
+                href="https://github.com/Mateos1712/cloudvault-aws"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
             </article>
 
             <article class="project-card" data-reveal>
               <figure class="project-visual">
                 <img
-                  src="assets/projects/project-terraform.webp"
-                  alt="Diagrama conceptual de infraestructura como código"
+                  src="assets/projects/project-campus-pulse.webp"
+                  alt="Diagrama conceptual de la plataforma Cloud y DevOps Campus Pulse"
                   width="1280"
                   height="720"
                   loading="lazy"
@@ -421,12 +432,23 @@
               </figure>
               <div class="project-topline">
                 <span class="project-number">03</span>
-                <span class="status">Próximamente</span>
+                <span class="status status-progress"><i></i> En desarrollo</span>
               </div>
-              <p class="project-type">Terraform</p>
-              <h3>Infraestructura AWS como código</h3>
-              <p>Módulos reutilizables, variables, outputs y estado remoto con documentación.</p>
-              <div class="tag-list"><span>IaC</span><span>Modules</span><span>Remote state</span></div>
+              <p class="project-type">Cloud · DevOps · Observabilidad</p>
+              <h3>Campus Pulse Cloud Platform</h3>
+              <p>
+                Laboratorio SaaS educativo con API instrumentada, contenedores, CI/CD,
+                infraestructura para ECS Fargate, manifiestos Kubernetes y observabilidad.
+              </p>
+              <div class="tag-list"><span>Docker</span><span>Terraform</span><span>ECS</span><span>Kubernetes</span></div>
+              <a
+                class="project-link"
+                href="https://github.com/Mateos1712/campuspulse-cloud-platform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
             </article>
 
             <article class="project-card" data-reveal>
