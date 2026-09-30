@@ -1,413 +1,560 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Andrés Mateos · Portafolio DevOps</title>
-  <meta name="description" content="Portafolio profesional de Andrés Mateos — DevOps, Cloud, Automatización y Observabilidad. Proyectos con AWS, Terraform, Docker, CI/CD y más." />
-  <link rel="canonical" href="https://andresmateos.github.io/" />
-  <meta name="theme-color" content="#0a192f" />
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Andrés Mateos · Portafolio DevOps" />
-  <meta property="og:description" content="Proyectos de DevOps, Cloud y Automatización." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://andresmateos.github.io/" />
-  <meta property="og:image" content="/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- Favicons (opcional: sube a /assets) -->
-  <link rel="icon" href="/assets/favicon.ico" />
-  <!-- Iconos de tecnologías (Devicon) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    /* ==================== Base & Tema ==================== */
-    :root{
-      --bg:#f6f8ff;           /* fondo claro con tinte */
-      --bg-card:#ffffff;      /* tarjetas */
-      --text:#0f172a;         /* texto principal */
-      --muted:#5b6b88;        /* texto secundario */
-      --brand:#0a192f;        /* primario */
-      --accent:#64ffda;       /* acento turquesa */
-      --accent2:#7aa2f7;      /* acento azulado */
-      --accent3:#f472b6;      /* acento magenta suave */
-      --ring:rgba(100,255,218,.5);
-      --border:#e6ebf2;
-      --code:#0b1020;
-      --shadow:0 10px 30px rgba(2,6,23,.08);
-    }
-    @media (prefers-color-scheme: dark){
-      :root{
-        --bg:#0b1220;
-        --bg-card:#0f172a;
-        --text:#e6edf7;
-        --muted:#9fb1d1;
-        --brand:#0a192f;
-        --accent:#64ffda;
-        --accent2:#7aa2f7;
-        --accent3:#f472b6;
-        --ring:rgba(100,255,218,.35);
-        --border:#1f2a44;
-        --code:#e6edf7;
-        --shadow:0 14px 44px rgba(0,0,0,.45);
+    <title>Andrés Mateos | Cloud &amp; DevOps Engineer</title>
+    <meta
+      name="description"
+      content="Portafolio de Andrés Mateos, Cloud & DevOps Engineer en crecimiento: AWS, Terraform, Linux, automatización y CI/CD."
+    />
+    <meta name="author" content="Andrés Mateos" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://mateos1712.github.io/amateos.portafolio.mx/" />
+
+    <meta name="theme-color" content="#07111f" id="theme-color" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Portafolio de Andrés Mateos" />
+    <meta property="og:title" content="Andrés Mateos | Cloud & DevOps Engineer" />
+    <meta
+      property="og:description"
+      content="Cloud, automatización e infraestructura: una trayectoria técnica en construcción con fundamentos sólidos."
+    />
+    <meta property="og:url" content="https://mateos1712.github.io/amateos.portafolio.mx/" />
+    <meta
+      property="og:image"
+      content="https://mateos1712.github.io/amateos.portafolio.mx/assets/og-cloud-devops.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Andrés Mateos, Cloud & DevOps Engineer en crecimiento" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Andrés Mateos | Cloud & DevOps Engineer" />
+    <meta
+      name="twitter:description"
+      content="Cloud, automatización e infraestructura: una trayectoria técnica en construcción."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mateos1712.github.io/amateos.portafolio.mx/assets/og-cloud-devops.png"
+    />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="style.css?v=2.2.0" />
+
+    <script>
+      document.documentElement.classList.add("js");
+      try {
+        const savedTheme = localStorage.getItem("portfolio-theme");
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        document.documentElement.dataset.theme = savedTheme || systemTheme;
+      } catch {
+        document.documentElement.dataset.theme = "dark";
       }
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.7;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    a{color:inherit}
-    .container{max-width:1100px; margin-inline:auto; padding-inline:24px}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border:1px solid var(--border);border-radius:12px;text-decoration:none;font-weight:600;transition:transform .12s ease, box-shadow .12s ease, border-color .12s}
-    .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow);border-color:var(--accent)}
-    .btn.primary{background:linear-gradient(135deg,var(--brand) 0%, var(--accent2) 60%, var(--accent) 100%);color:white;border-color:transparent; box-shadow:0 6px 20px rgba(122,162,247,.25)}
-    .btn.ghost{background:transparent}
-    .chip{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .6rem;border:1px solid var(--border);border-radius:999px;font-size:.82rem;color:var(--muted);background:color-mix(in oklab, var(--bg-card) 80%, var(--accent) 2%)}
-    .chip i{font-size:1rem;opacity:.9}
-    .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:rgba(16,24,40,.08); color:var(--code); padding:.1rem .35rem; border-radius:6px; border:1px solid var(--border)}
-    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    </script>
 
-    /* ==================== Header ==================== */
-    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px); background:linear-gradient(180deg, color-mix(in oklab, var(--bg) 85%, transparent), transparent); border-bottom:1px solid var(--border); z-index:50}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
-    .brand{display:flex;align-items:center;gap:.8rem;font-weight:800}
-    .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--accent);box-shadow:0 0 0 6px var(--ring)}
-    ul.nav{list-style:none;display:flex;gap:1rem;margin:0;padding:0}
-    ul.nav a{font-weight:600;text-decoration:none;border-radius:10px;padding:.4rem .7rem}
-    ul.nav a:focus, ul.nav a:hover{outline:none;background:rgba(100,255,218,.12)}
-    .skip{position:absolute;left:-9999px}
-    .skip:focus{left:1rem;top:1rem;z-index:60}
-
-    /* ==================== Secciones ==================== */
-    section{padding:64px 0;border-bottom:1px solid var(--border)}
-    section:last-child{border-bottom:0}
-    h1,h2,h3{line-height:1.2;margin:0 0 12px}
-    h2{font-size:clamp(1.5rem,1.2rem+1.2vw,2rem)}
-    p.lead{font-size:clamp(1rem,.9rem+0.6vw,1.2rem);color:var(--muted);margin:0}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
-    .hero h1{font-size:clamp(1.6rem,1.2rem+2.2vw,2.6rem)}
-    .hero .actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:18px}
-    .card-hero{background:linear-gradient(180deg, rgba(122,162,247,.12), rgba(100,255,218,.10)); border:1px solid var(--border);border-radius:16px;padding:18px}
-
-    /* About */
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .stack{display:flex;flex-wrap:wrap;gap:.5rem}
-
-    /* Projects */
-    .filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:16px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
-    .card{ background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:18px; box-shadow:var(--shadow);
-      display:flex;flex-direction:column;gap:10px; transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; position:relative; overflow:hidden }
-    .card:hover{transform:translateY(-3px); border-color:var(--accent)}
-    .card h3{margin:0}
-    .meta{display:flex;flex-wrap:wrap;gap:.3rem}
-    .links{display:flex;gap:.6rem;margin-top:auto}
-    .links a{font-weight:700;text-decoration:none}
-    .card img.thumb{width:100%;height:140px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
-    .card::after{content:"";position:absolute;inset:auto auto 0 0;height:4px;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent3));opacity:.9}
-
-    /* Contacto */
-    .contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-    .contact-card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:16px}
-
-    /* Etiquetas por categoría en tarjetas */
-    /*.tag-aws::after{background:linear-gradient(90deg,#FF9900,#232F3E)}
-    .tag-iac::after{background:linear-gradient(90deg,#5c4ee5,#00d4ff)}
-    .tag-ci-cd::after{background:linear-gradient(90deg,#24292e,#2ea043)}
-    .tag-observabilidad::after{background:linear-gradient(90deg,#f07,#ffb703)}
-    .tag-docker::after{background:linear-gradient(90deg,#0db7ed,#384d54)}*/
-
-    /* AWS */
-    .tag-aws{
-      background:linear-gradient(135deg,#FF9900,#232F33 );
-      color:#fff;                 /* Texto blanco */
-    }
-.tag-aws h3, .tag-aws p{color:#fff}
-.tag-aws .links a{color:#ffe7b3}
-
-/* IaC */
-.tag-iac{
-  background:linear-gradient(135deg,#5c4ee5,#00d4ff);
-  color:#fff;
-}
-.tag-iac h3, .tag-iac p{color:#fff}
-.tag-iac .links a{color:#e0f0ff}
-
-/* CI/CD */
-.tag-ci-cd{
-  background:linear-gradient(135deg,#24292e,#2ea043);
-  color:#fff;
-}
-.tag-ci-cd h3, .tag-ci-cd p{color:#fff}
-.tag-ci-cd .links a{color:#d0ffd6}
-
-/* Observabilidad */
-.tag-observabilidad{
-  background:linear-gradient(135deg,#f07,#ffb703);
-  color:#fff;
-}
-.tag-observabilidad h3, .tag-observabilidad p{color:#fff}
-.tag-observabilidad .links a{color:#fff8d6}
-
-/* Docker */
-.tag-docker{
-  background:linear-gradient(135deg,#0db7ed,#384d54);
-  color:#fff;
-}
-.tag-docker h3, .tag-docker p{color:#fff}
-.tag-docker .links a{color:#c8f6ff}
-
-    /* Responsivo */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .about-grid{grid-template-columns:1fr}
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Andrés Mateos",
-    "url": "https://andresmateos.github.io/",
-    "jobTitle": "DevOps Engineer",
-    "sameAs": [
-      "https://www.linkedin.com/in/andres-mateos-8192822a1",
-      "https://github.com/Mateos1712"
-    ]
-  }
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M222LKW5N5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-M222LKW5N5');
-  </script>
-</head>
-<body>
-  <a class="skip btn ghost" href="#contenido">Saltar al contenido</a>
-  <header>
-    <div class="container">
-      <nav aria-label="Principal">
-        <div class="brand" aria-label="Andrés Mateos, Portafolio">
-          <span class="dot" aria-hidden="true"></span>
-          <span>Andrés Mateos</span>
-        </div>
-        <ul class="nav">
-          <li><a href="#about">Sobre mí</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="contenido" class="container" tabindex="-1">
-    <!-- ==================== Hero ==================== -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <h1 id="hero-title">Ingeniero DevOps — AWS · Terraform · Docker · CI/CD</h1>
-        <p class="lead">Construyo e integro plataformas confiables de entrega continua, automatización de infraestructura y observabilidad. Me enfoco en impacto, simplicidad y seguridad.</p>
-        <div class="actions">
-          <a class="btn primary" href="https://github.com/Mateos1712" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/andres-mateos-8192822a1" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn ghost" href="mailto:mateos1711@gmail.com">Contáctame</a>
-        </div>
-      </div>
-      <aside class="card-hero" aria-label="Resumen de habilidades">
-        <strong>Highlights</strong>
-        <ul>
-          <li>Infraestructura como código con <strong>Terraform</strong></li>
-          <li>Contenerización con <strong>Docker</strong> y orquestación básica</li>
-          <li>CI/CD con <strong>GitHub Actions</strong></li>
-          <li>Monitoreo con <strong>Prometheus/Grafana</strong></li>
-          <li>Linux & Scripting (<strong>Bash/Python</strong>)</li>
-        </ul>
-      </aside>
-    </section>
-
-    <!-- ==================== Sobre mí ==================== -->
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">Sobre mí</h2>
-      <div class="about-grid">
-        <p>
-          Soy Ingeniero en Computación con foco en <strong>DevOps</strong>, <strong>Cloud</strong> y <strong>automatización</strong>. Me apasiona reducir el tiempo de entrega con pipelines confiables, infraestructura reproducible y buenas prácticas de seguridad.
-        </p>
-        <div>
-          <div class="stack" aria-label="Stack principal">
-            <span class="chip" title="Amazon Web Services">AWS</span>
-            <span class="chip">Terraform</span>
-            <span class="chip">Docker</span>
-            <span class="chip">Kubernetes (básico)</span>
-            <span class="chip">GitHub Actions</span>
-            <span class="chip">Linux</span>
-            <span class="chip">Bash</span>
-            <span class="chip">Python</span>
-            <span class="chip">Prometheus</span>
-            <span class="chip">Grafana</span>
-            <span class="chip">NGINX</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== Proyectos ==================== -->
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Proyectos</h2>
-      <div class="filters" role="toolbar" aria-label="Filtros de proyectos">
-        <button class="btn ghost" data-filter="all">Todos</button>
-        <button class="btn ghost" data-filter="aws">AWS</button>
-        <button class="btn ghost" data-filter="iac">IaC</button>
-        <button class="btn ghost" data-filter="ci-cd">CI/CD</button>
-        <button class="btn ghost" data-filter="observabilidad">Observabilidad</button>
-        <button class="btn ghost" data-filter="docker">Docker</button>
-      </div>
-      <div id="projects-grid" class="grid" aria-live="polite"></div>
-      <p class="lead" style="margin-top:12px">Tip: para añadir un proyecto nuevo solo agrega un objeto al array <span class="kbd">projects</span> en el script de abajo.</p>
-    </section>
-
-    <!-- ==================== Contacto ==================== -->
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contacto</h2>
-      <div class="contact-cards">
-        <div class="contact-card">
-          <h3>Email</h3>
-          <p><a href="mailto:mateos1711@gmail.com">mateos1711@gmail.com</a></p>
-        </div>
-        <div class="contact-card">
-          <h3>LinkedIn</h3>
-          <p><a href="https://www.linkedin.com/in/andres-mateos-8192822a1" target="_blank" rel="noopener">linkedin.com/in/andres-mateos-8192822a1</a></p>
-        </div>
-        <div class="contact-card">
-          <h3>GitHub</h3>
-          <p><a href="https://github.com/Mateos1712" target="_blank" rel="noopener">github.com/Mateos1712</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <small>© <span id="y"></span> Andrés Mateos — Portafolio. Construido con HTML/CSS puro y alojado en GitHub Pages.</small>
-    </div>
-  </footer>
-
-  <script>
-    // Año actual en footer
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // ====== Data de proyectos (edita aquí) ======
-    const projects = [
+    <script type="application/ld+json">
       {
-        title: 'Pipeline CI/CD con GitHub Actions',
-        desc: 'Build + test + despliegue a GitHub Pages con matrices y caché de dependencias.',
-        tags: ['ci-cd'],
-        stack: ['GitHub Actions','Node','Docker'],
-        repo: 'https://github.com/Mateos1712/ci-cd-actions-demo',
-        demo: 'https://mateos1712.github.io/ci-cd-actions-demo/',
-        image: 'assets/ci-cd-cover.jpg',
-        badges: [
-          'https://img.shields.io/github/actions/workflow/status/Mateos1712/ci-cd-actions-demo/ci.yml?label=CI'
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Andrés Mateos",
+        "url": "https://mateos1712.github.io/amateos.portafolio.mx/",
+        "image": "https://avatars.githubusercontent.com/u/148858977?v=4",
+        "jobTitle": "Cloud & DevOps Engineer en crecimiento",
+        "description": "Ingeniero en Computación orientado a Cloud, DevOps y automatización.",
+        "email": "mailto:mateos1711@gmail.com",
+        "sameAs": [
+          "https://github.com/Mateos1712",
+          "https://www.linkedin.com/in/andres-mateos-8192822a1"
+        ],
+        "knowsAbout": [
+          "Amazon Web Services",
+          "Terraform",
+          "Linux",
+          "Bash",
+          "Python",
+          "Continuous Integration",
+          "Continuous Delivery"
         ]
-      },
-      {
-        title: 'Infraestructura AWS con Terraform',
-        desc: 'VPC + subnets + EC2 + RDS + S3 con módulos reutilizables y remote state.',
-        tags: ['aws','iac'],
-        stack: ['Terraform','AWS','VPC','EC2','RDS','S3'],
-        repo: 'https://github.com/Mateos1712/aws-terraform-stack',
-        docs: 'projects/aws-terraform-stack.html',
-        image: 'assets/aws-tf-cover.jpg'
-      },
-      {
-        title: 'Observabilidad con Prometheus y Grafana',
-        desc: 'Exporters + dashboards + alertas para una app contenedorizada.',
-        tags: ['observabilidad','docker'],
-        stack: ['Prometheus','Grafana','Docker','Alertmanager'],
-        repo: 'https://github.com/Mateos1712/observability-stack',
-        image: 'assets/observability-cover.jpg'
-      },
-      {
-        title: 'Contenerización de aplicación Flask',
-        desc: 'Dockerfile multietapa, Compose y buenas prácticas de imagen.',
-        tags: ['docker'],
-        stack: ['Docker','Flask','Compose'],
-        repo: 'https://github.com/Mateos1712/flask-docker-demo',
-        demo: '#',
-        image: 'assets/flask-docker-cover.jpg'
       }
-    ];
+    </script>
 
-    // ====== Render ======
-    const grid = document.getElementById('projects-grid');
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M222LKW5N5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-M222LKW5N5");
+    </script>
+  </head>
 
-    // Mapa de iconos (Devicon) por tecnología
-    const iconMap = {
-      'AWS':'devicon-amazonwebservices-plain colored',
-      'Terraform':'devicon-terraform-plain colored',
-      'Docker':'devicon-docker-plain colored',
-      'Kubernetes (básico)':'devicon-kubernetes-plain colored',
-      'GitHub Actions':'devicon-github-original colored',
-      'Linux':'devicon-linux-plain colored',
-      'Bash':'devicon-bash-plain',
-      'Python':'devicon-python-plain colored',
-      'Prometheus':'devicon-prometheus-plain colored',
-      'Grafana':'devicon-grafana-plain colored',
-      'NGINX':'devicon-nginx-original colored',
-      'Node':'devicon-nodejs-plain colored',
-      'Flask':'devicon-flask-original',
-      'Compose':'devicon-docker-plain'
-    };
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    function iconify(name){
-      const cls = iconMap[name] || '';
-      return cls ? `<i class="${cls}" aria-hidden="true"></i><span>${name}</span>` : `<span>${name}</span>`;
-    }
+    <header class="site-header" id="inicio">
+      <div class="container nav-shell">
+        <a class="brand" href="#inicio" aria-label="Andrés Mateos, inicio">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 44 44" role="img">
+              <path d="M13 29.5h19a7 7 0 0 0 .6-14 11.5 11.5 0 0 0-21.8 3.2A5.7 5.7 0 0 0 13 29.5Z" />
+              <path d="m17 24 5-5 5 5M22 19v12" />
+            </svg>
+          </span>
+          <span>
+            <strong>Andrés Mateos</strong>
+            <small>Cloud · DevOps</small>
+          </span>
+        </a>
 
-    function render(list){
-      grid.innerHTML = '';
-      list.forEach(p => {
-        const card = document.createElement('article');
-        card.className = 'card';
-        const mainTag = (p.tags && p.tags[0]) ? `tag-${p.tags[0]}` : '';
-        if(mainTag) card.classList.add(mainTag);
-        card.setAttribute('data-tags', (p.tags||[]).join(' '));
-        card.innerHTML = `
-          ${p.image ? `<img class="thumb" src="${p.image}" alt="${p.title}" loading="lazy"/>` : ''}
-          <h3>${p.title}</h3>
-          <p>${p.desc}</p>
-          <div class="meta">${(p.stack||[]).map(s=>`<span class="chip">${iconify(s)}</span>`).join('')}</div>
-          ${p.badges ? `<div class="meta">${p.badges.map(src=>`<img src="${src}" alt="badge" height="20" loading="lazy"/>`).join('')}</div>`:''}
-          <div class="links">
-            ${p.repo ? `<a class="btn ghost" href="${p.repo}" target="_blank" rel="noopener" aria-label="Repositorio de ${p.title}">Repo</a>`:''}
-            ${p.demo ? `<a class="btn ghost" href="${p.demo}" target="_blank" rel="noopener" aria-label="Demo de ${p.title}">Demo</a>`:''}
-            ${p.docs ? `<a class="btn ghost" href="${p.docs}" aria-label="Documentación de ${p.title}">Docs</a>`:''}
+        <nav class="site-nav" aria-label="Navegación principal">
+          <ul class="nav-list" id="primary-navigation">
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button theme-toggle" type="button" aria-label="Activar modo claro">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" />
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z" />
+            </svg>
+          </button>
+
+          <button
+            class="icon-button nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Abrir menú"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero section" id="perfil" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow"><span></span> Ingeniería, nube y automatización</p>
+            <h1 id="hero-title">
+              Cloud &amp; DevOps Engineer
+              <span>en crecimiento.</span>
+            </h1>
+            <p class="hero-lead">
+              Soy Andrés, Ingeniero en Computación enfocado en construir fundamentos sólidos en
+              AWS, infraestructura como código, Linux y CI/CD. Convierto lo que aprendo en
+              prácticas reproducibles, documentación clara y proyectos reales.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#proyectos">
+                Explorar proyectos
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="m7 4 6 6-6 6" />
+                </svg>
+              </a>
+              <a class="button button-secondary" href="mailto:mateos1711@gmail.com">
+                Hablemos de una oportunidad
+              </a>
+            </div>
+
+            <div class="hero-links" aria-label="Perfiles profesionales">
+              <a href="https://github.com/Mateos1712" target="_blank" rel="noopener noreferrer">
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/andres-mateos-8192822a1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
 
-    render(projects);
+          <aside class="hero-console" aria-label="Resumen profesional" data-reveal>
+            <div class="console-bar">
+              <div class="console-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>profile.yml</span>
+              <span class="console-status"><i></i> learning</span>
+            </div>
+            <div class="console-content">
+              <p><span>name:</span> "Andrés Mateos"</p>
+              <p><span>role:</span> "Cloud &amp; DevOps Engineer"</p>
+              <p><span>stage:</span> "En crecimiento"</p>
+              <p><span>focus:</span></p>
+              <ul>
+                <li>"AWS &amp; cloud architecture"</li>
+                <li>"Terraform &amp; automation"</li>
+                <li>"Linux &amp; scripting"</li>
+                <li>"CI/CD fundamentals"</li>
+              </ul>
+              <p><span>principles:</span> ["claridad", "seguridad", "mejora continua"]</p>
+            </div>
+            <div class="console-footer">
+              <span>main</span>
+              <span>UTF-8</span>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-    // ====== Filtros ======
-    const buttons = document.querySelectorAll('[data-filter]');
-    buttons.forEach(btn => btn.addEventListener('click', () => {
-      const f = btn.dataset.filter;
-      if(f === 'all'){ return render(projects); }
-      render(projects.filter(p => p.tags.includes(f)));
-    }));
-  </script>
-</body>
+      <section class="section" id="experiencia" aria-labelledby="experience-title">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker">Trayectoria</p>
+            <h2 id="experience-title">Experiencia construida con intención</h2>
+            <p>
+              Mi perfil está en evolución. Presento con transparencia dónde estoy y hacia dónde
+              estoy llevando mi carrera.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item" data-reveal>
+              <div class="timeline-marker" aria-hidden="true">01</div>
+              <div class="timeline-content">
+                <p class="timeline-label">Base profesional</p>
+                <h3>Ingeniería en Computación</h3>
+                <p>
+                  Formación técnica para comprender sistemas, redes, software y resolución
+                  estructurada de problemas.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal>
+              <div class="timeline-marker" aria-hidden="true">02</div>
+              <div class="timeline-content">
+                <p class="timeline-label">Enfoque actual</p>
+                <h3>Cloud &amp; DevOps</h3>
+                <p>
+                  Desarrollo práctico en AWS, Terraform, Linux, automatización y flujos de
+                  integración y entrega continua.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item" data-reveal>
+              <div class="timeline-marker" aria-hidden="true">03</div>
+              <div class="timeline-content">
+                <p class="timeline-label">Siguiente etapa</p>
+                <h3>Proyectos demostrables</h3>
+                <p>
+                  El objetivo es convertir cada tema de estudio en repositorios documentados,
+                  reproducibles y fáciles de evaluar.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tinted" id="stack" aria-labelledby="stack-title">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker">Stack técnico</p>
+            <h2 id="stack-title">Herramientas que forman mi ruta</h2>
+            <p>
+              Tecnologías que estudio y practico con foco en infraestructura, automatización y
+              operación confiable.
+            </p>
+          </div>
+
+          <div class="stack-grid">
+            <article class="stack-card" data-reveal>
+              <span class="stack-icon stack-icon-cloud" aria-hidden="true">☁</span>
+              <p class="stack-level">Enfoque principal</p>
+              <h3>AWS</h3>
+              <p>Servicios fundamentales, arquitectura, seguridad y operación en la nube.</p>
+              <div class="tag-list"><span>IAM</span><span>EC2</span><span>S3</span><span>VPC</span></div>
+            </article>
+
+            <article class="stack-card" data-reveal>
+              <span class="stack-icon" aria-hidden="true">TF</span>
+              <p class="stack-level">En práctica</p>
+              <h3>Terraform</h3>
+              <p>Infraestructura declarativa, modularidad, estado y flujos reproducibles.</p>
+              <div class="tag-list"><span>IaC</span><span>Modules</span><span>State</span></div>
+            </article>
+
+            <article class="stack-card" data-reveal>
+              <span class="stack-icon" aria-hidden="true">&gt;_</span>
+              <p class="stack-level">Fundamentos</p>
+              <h3>Linux &amp; Bash</h3>
+              <p>Administración, terminal, permisos y automatización de tareas operativas.</p>
+              <div class="tag-list"><span>Shell</span><span>Git</span><span>Networking</span></div>
+            </article>
+
+            <article class="stack-card" data-reveal>
+              <span class="stack-icon" aria-hidden="true">PY</span>
+              <p class="stack-level">En desarrollo</p>
+              <h3>Python</h3>
+              <p>Scripts legibles para automatizar procesos y conectar herramientas.</p>
+              <div class="tag-list"><span>Scripting</span><span>APIs</span><span>Automation</span></div>
+            </article>
+
+            <article class="stack-card" data-reveal>
+              <span class="stack-icon" aria-hidden="true">CI</span>
+              <p class="stack-level">En práctica</p>
+              <h3>CI/CD</h3>
+              <p>Versionado, validaciones automáticas y entregas consistentes.</p>
+              <div class="tag-list"><span>GitHub Actions</span><span>Git</span><span>YAML</span></div>
+            </article>
+
+            <article class="stack-card" data-reveal>
+              <span class="stack-icon" aria-hidden="true">DK</span>
+              <p class="stack-level">Fundamentos</p>
+              <h3>Docker</h3>
+              <p>Entornos portables, imágenes pequeñas y ejecución consistente.</p>
+              <div class="tag-list"><span>Containers</span><span>Images</span><span>Compose</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="proyectos" aria-labelledby="projects-title">
+        <div class="container">
+          <div class="section-heading projects-heading" data-reveal>
+            <div>
+              <p class="section-kicker">Laboratorio personal</p>
+              <h2 id="projects-title">Proyectos</h2>
+            </div>
+            <p>
+              Tres repositorios públicos con trabajo verificable y una hoja de ruta honesta. Las
+              tarjetas “próximamente” no enlazan a proyectos que todavía no existen.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card project-card-featured" data-reveal>
+              <figure class="project-visual">
+                <img
+                  src="assets/projects/project-portfolio.webp"
+                  alt="Diagrama conceptual del flujo de entrega del portafolio"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-topline">
+                <span class="project-number">01</span>
+                <span class="status status-live"><i></i> Repositorio público</span>
+              </div>
+              <div>
+                <p class="project-type">HTML · CSS · JavaScript</p>
+                <h3>Portafolio profesional Cloud &amp; DevOps</h3>
+                <p>
+                  Sitio responsive, accesible y sin framework, con modo claro/oscuro, navegación
+                  móvil y metadatos preparados para compartir.
+                </p>
+              </div>
+              <ul class="project-highlights">
+                <li>Diseño y contenido profesional</li>
+                <li>SEO técnico y Open Graph</li>
+                <li>Validación automatizada</li>
+              </ul>
+              <a
+                class="project-link"
+                href="https://github.com/Mateos1712/amateos.portafolio.mx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <figure class="project-visual">
+                <img
+                  src="assets/projects/project-cloudvault.webp"
+                  alt="Diagrama conceptual de la arquitectura AWS de CloudVault"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-topline">
+                <span class="project-number">02</span>
+                <span class="status status-live"><i></i> Repositorio público</span>
+              </div>
+              <p class="project-type">AWS · Terraform</p>
+              <h3>CloudVault — infraestructura AWS segura</h3>
+              <p>
+                Infraestructura reproducible con VPC en dos zonas, subredes públicas y privadas,
+                EC2 con Nginx y S3 cifrado, versionado y sin acceso público.
+              </p>
+              <div class="tag-list"><span>Terraform</span><span>VPC</span><span>EC2</span><span>S3</span></div>
+              <a
+                class="project-link"
+                href="https://github.com/Mateos1712/cloudvault-aws"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <figure class="project-visual">
+                <img
+                  src="assets/projects/project-campus-pulse.webp"
+                  alt="Diagrama conceptual de la plataforma Cloud y DevOps Campus Pulse"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-topline">
+                <span class="project-number">03</span>
+                <span class="status status-progress"><i></i> En desarrollo</span>
+              </div>
+              <p class="project-type">Cloud · DevOps · Observabilidad</p>
+              <h3>Campus Pulse Cloud Platform</h3>
+              <p>
+                Laboratorio SaaS educativo con API instrumentada, contenedores, CI/CD,
+                infraestructura para ECS Fargate, manifiestos Kubernetes y observabilidad.
+              </p>
+              <div class="tag-list"><span>Docker</span><span>Terraform</span><span>ECS</span><span>Kubernetes</span></div>
+              <a
+                class="project-link"
+                href="https://github.com/Mateos1712/campuspulse-cloud-platform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <figure class="project-visual">
+                <img
+                  src="assets/projects/project-bash-automation.webp"
+                  alt="Diagrama conceptual de automatización de servidores con Bash"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-topline">
+                <span class="project-number">04</span>
+                <span class="status">Próximamente</span>
+              </div>
+              <p class="project-type">Bash</p>
+              <h3>Kit de automatización para Linux</h3>
+              <p>Scripts seguros para auditoría, respaldos, inventario y tareas repetitivas.</p>
+              <div class="tag-list"><span>Shell</span><span>Linux</span><span>Automation</span></div>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <figure class="project-visual">
+                <img
+                  src="assets/projects/project-python-automation.webp"
+                  alt="Diagrama conceptual de automatización cloud con Python"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-topline">
+                <span class="project-number">05</span>
+                <span class="status">Próximamente</span>
+              </div>
+              <p class="project-type">Python</p>
+              <h3>Automatización cloud con Python</h3>
+              <p>Herramientas pequeñas, comprobables y documentadas para operaciones en la nube.</p>
+              <div class="tag-list"><span>Python</span><span>APIs</span><span>Testing</span></div>
+            </article>
+
+            <article class="project-card" data-reveal>
+              <figure class="project-visual">
+                <img
+                  src="assets/projects/project-cicd.webp"
+                  alt="Diagrama conceptual de un pipeline de integración y entrega continua"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="project-topline">
+                <span class="project-number">06</span>
+                <span class="status">Próximamente</span>
+              </div>
+              <p class="project-type">CI/CD</p>
+              <h3>Pipeline de entrega continua</h3>
+              <p>Lint, pruebas, artefactos y despliegue automatizado con controles claros.</p>
+              <div class="tag-list"><span>GitHub Actions</span><span>YAML</span><span>Quality</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+        <div class="container contact-shell" data-reveal>
+          <div>
+            <p class="section-kicker">Contacto</p>
+            <h2 id="contact-title">Construyamos la siguiente oportunidad.</h2>
+            <p>
+              Estoy abierto a roles junior, prácticas y colaboraciones donde pueda aportar,
+              aprender y crecer en Cloud &amp; DevOps.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="mailto:mateos1711@gmail.com">
+              Escribir por email
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 6 6-6 6" /></svg>
+            </a>
+            <a
+              class="button button-secondary"
+              href="https://www.linkedin.com/in/andres-mateos-8192822a1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Conectar en LinkedIn
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-shell">
+        <div>
+          <a class="footer-brand" href="#inicio">Andrés Mateos</a>
+          <p>Cloud &amp; DevOps Engineer en crecimiento.</p>
+        </div>
+        <p>© <span id="current-year">2026</span> · Diseñado y construido con HTML, CSS y JavaScript.</p>
+      </div>
+    </footer>
+
+    <script src="script.js?v=2.1.1" defer></script>
+  </body>
 </html>
