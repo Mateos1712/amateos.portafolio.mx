@@ -12,7 +12,7 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 - Secciones de trayectoria, stack, proyectos y contacto.
 - Contenido profesional con posicionamiento honesto.
 - Proyectos reales de AWS, Terraform, contenedores, CI/CD y observabilidad.
-- Tarjetas preparadas para futuros proyectos de Bash, Python y CI/CD.
+- Tarjetas preparadas para futuros proyectos de Python y CI/CD.
 - Diagramas de arquitectura generados para cada proyecto y optimizados en WebP.
 - SEO técnico, datos estructurados, Open Graph, Twitter Cards, canonical, sitemap y favicon.
 - Sin repositorios ficticios ni enlaces vacíos.
@@ -33,6 +33,7 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 │   ├── projects/
 │   │   ├── project-aws-architecture.webp
 │   │   ├── project-bash-automation.webp
+│   │   ├── project-cafe-53.webp
 │   │   ├── project-campus-pulse.webp
 │   │   ├── project-cicd.webp
 │   │   ├── project-cloudvault.webp
@@ -54,12 +55,13 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 └── robots.txt
 ```
 
-Las imágenes de proyectos son ilustraciones conceptuales generadas con IA. En CloudVault y Campus Pulse resumen componentes presentes en sus repositorios; no prueban por sí mismas que la infraestructura esté desplegada. Las tarjetas marcadas como `Próximamente` representan la hoja de ruta.
+Las imágenes de CloudVault y Campus Pulse son ilustraciones conceptuales generadas con IA. La imagen de Café 53 es una captura de la aplicación desplegada. Las tarjetas marcadas como `Próximamente` representan la hoja de ruta.
 
 ## Proyectos incluidos
 
 - [CloudVault AWS](https://github.com/Mateos1712/cloudvault-aws): VPC en dos zonas, subredes públicas y privadas, EC2 con Nginx y un bucket S3 privado con versionado y cifrado, definido con Terraform.
 - [Campus Pulse Cloud Platform](https://github.com/Mateos1712/campuspulse-cloud-platform): laboratorio DevOps en desarrollo con API instrumentada, Docker, CI/CD, Terraform para ECS Fargate, manifiestos Kubernetes y observabilidad con Prometheus y Grafana.
+- [Café 53](https://github.com/Mateos1712/cafe-53): aplicación serverless desplegada con API Gateway, Lambda, DynamoDB, EventBridge, SQS/DLQ, SNS, CloudFront, Terraform, Bruno y CloudWatch.
 - [Portafolio Cloud & DevOps](https://github.com/Mateos1712/amateos.portafolio.mx): este sitio, construido con HTML, CSS y JavaScript sin frameworks.
 
 ## Ejecutar localmente

@@ -999,6 +999,18 @@ h3 {
   color: #7de8f4;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.project-actions .project-link {
+  margin-top: 0;
+}
+
 .contact-section {
   padding-top: 70px;
 }
