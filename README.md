@@ -1,6 +1,6 @@
-# Portafolio Cloud & DevOps — Andrés Mateos
+# Portafolio profesional — Andrés Mateos
 
-Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud & DevOps Engineer en crecimiento**. Está construido sin frameworks para mantener una base rápida, accesible y fácil de mantener.
+Portafolio profesional, moderno y responsive para presentar mi perfil como **Ingeniero en Ciencias de la Computación titulado**, con experiencia en integraciones, Linux, infraestructura y automatización, además de proyectos prácticos de AWS y Terraform. Está construido sin frameworks para mantener una base rápida, accesible y fácil de mantener.
 
 **Sitio:** [mateos1712.github.io/amateos.portafolio.mx](https://mateos1712.github.io/amateos.portafolio.mx/)
 
@@ -11,9 +11,9 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 - Modo claro y oscuro con persistencia local.
 - Secciones de trayectoria, stack, proyectos y contacto.
 - Contenido profesional con posicionamiento honesto.
-- Proyectos reales de AWS, Terraform, contenedores, CI/CD y observabilidad.
-- Tarjetas preparadas para futuros proyectos de Python y CI/CD.
-- Diagramas de arquitectura generados para cada proyecto y optimizados en WebP.
+- Proyectos reales de AWS, Terraform, contenedores, APIs y observabilidad.
+- Casos profesionales privados descritos sin exponer código ni datos de clientes.
+- Diagramas técnicos SVG basados en la arquitectura real de cada proyecto.
 - SEO técnico, datos estructurados, Open Graph, Twitter Cards, canonical, sitemap y favicon.
 - Sin repositorios ficticios ni enlaces vacíos.
 - Animaciones discretas con soporte para `prefers-reduced-motion`.
@@ -31,6 +31,10 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 .
 ├── assets/
 │   ├── projects/
+│   │   ├── diagram-campus-pulse.svg
+│   │   ├── diagram-cloudvault.svg
+│   │   ├── diagram-enterprise-platform.svg
+│   │   ├── diagram-nas-infrastructure.svg
 │   │   ├── project-aws-architecture.webp
 │   │   ├── project-bash-automation.webp
 │   │   ├── project-cafe-53.webp
@@ -55,14 +59,16 @@ Portafolio profesional, moderno y responsive para presentar mi ruta como **Cloud
 └── robots.txt
 ```
 
-Las imágenes de CloudVault y Campus Pulse son ilustraciones conceptuales generadas con IA. La imagen de Café 53 es una captura de la aplicación desplegada. Las tarjetas marcadas como `Próximamente` representan la hoja de ruta.
+Los diagramas de CloudVault y Campus Pulse reflejan los recursos y flujos documentados en sus repositorios. La imagen de Café 53 es una captura de la aplicación desplegada. Los casos de aplicaciones empresariales y NAS son resúmenes visuales sin información confidencial.
 
 ## Proyectos incluidos
 
 - [CloudVault AWS](https://github.com/Mateos1712/cloudvault-aws): VPC en dos zonas, subredes públicas y privadas, EC2 con Nginx y un bucket S3 privado con versionado y cifrado, definido con Terraform.
 - [Campus Pulse Cloud Platform](https://github.com/Mateos1712/campuspulse-cloud-platform): laboratorio DevOps en desarrollo con API instrumentada, Docker, CI/CD, Terraform para ECS Fargate, manifiestos Kubernetes y observabilidad con Prometheus y Grafana.
 - [Café 53](https://github.com/Mateos1712/cafe-53): aplicación serverless desplegada con API Gateway, Lambda, DynamoDB, EventBridge, SQS/DLQ, SNS, CloudFront, Terraform, Bruno y CloudWatch.
-- [Portafolio Cloud & DevOps](https://github.com/Mateos1712/amateos.portafolio.mx): este sitio, construido con HTML, CSS y JavaScript sin frameworks.
+- [Portafolio profesional](https://github.com/Mateos1712/amateos.portafolio.mx): este sitio, construido con HTML, CSS y JavaScript sin frameworks.
+- **Virtualización de aplicaciones empresariales:** caso profesional privado con Linux, Tomcat, Docker y LDAP/Active Directory.
+- **Implementación NAS y red local:** proyecto freelance privado con Synology, conectividad, inventario y cámaras IP.
 
 ## Ejecutar localmente
 
@@ -92,7 +98,7 @@ python scripts/generate_social_assets.py
 
 ## Añadir un proyecto real
 
-1. Sustituye una tarjeta marcada como `Próximamente` en `index.html`.
+1. Añade una tarjeta nueva en `index.html` solo cuando exista trabajo realizado.
 2. Describe el objetivo, la arquitectura y las decisiones técnicas.
 3. Añade el enlace únicamente cuando el repositorio o demo exista.
 4. Ejecuta la validación y revisa el resultado en móvil y escritorio.
