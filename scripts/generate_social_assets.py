@@ -55,16 +55,17 @@ def generate_open_graph() -> None:
         draw.line((0, y, 1200, y), fill=(47, 72, 98, 40), width=1)
 
     draw.rounded_rectangle((62, 58, 1138, 572), radius=34, fill=(5, 12, 22, 220), outline=(44, 80, 105, 255), width=2)
-    draw.rounded_rectangle((86, 84, 246, 118), radius=17, fill=(16, 67, 72, 255), outline=(66, 211, 196, 130), width=1)
+    draw.rounded_rectangle((86, 84, 270, 118), radius=17, fill=(16, 67, 72, 255), outline=(66, 211, 196, 130), width=1)
     draw.ellipse((103, 96, 113, 106), fill="#5eead4")
-    draw.text((124, 91), "CLOUD · DEVOPS", font=font(FONT_SEMIBOLD, 18), fill="#a7f3d0")
+    draw.text((124, 91), "SYSTEMS · CLOUD", font=font(FONT_SEMIBOLD, 17), fill="#a7f3d0")
 
     draw.text((86, 164), "Andrés Mateos", font=font(FONT_BOLD, 68), fill="#f4f8fc")
-    draw.text((86, 250), "Cloud & DevOps Engineer", font=font(FONT_BOLD, 48), fill="#65e8f6")
-    draw.text((86, 319), "en crecimiento", font=font(FONT_BOLD, 48), fill="#9aacbf")
+    draw.text((86, 250), "Ingeniero en Ciencias", font=font(FONT_BOLD, 39), fill="#65e8f6")
+    draw.text((86, 300), "de la Computación", font=font(FONT_BOLD, 39), fill="#65e8f6")
+    draw.text((88, 357), "TITULADO · 2025", font=font(FONT_BOLD, 22), fill="#9aacbf")
     draw.text(
-        (90, 398),
-        "AWS  ·  Terraform  ·  Linux  ·  Automatización  ·  CI/CD",
+        (90, 409),
+        "APIs  ·  Linux  ·  Docker  ·  AWS  ·  Terraform",
         font=font(FONT_SEMIBOLD, 24),
         fill="#c3d0de",
     )

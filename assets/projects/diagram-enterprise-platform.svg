@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Caso profesional de aplicaciones empresariales</title>
+  <desc id="desc">Usuarios corporativos se autentican con Active Directory y acceden a aplicaciones desplegadas sobre Linux, Tomcat y contenedores Docker, con diagnóstico mediante línea de comandos y logs.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071426"/><stop offset="1" stop-color="#13233d"/></linearGradient>
+    <linearGradient id="n3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173854"/><stop offset="1" stop-color="#0d2239"/></linearGradient>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L8 3L0 6Z" fill="#5eead4"/></marker>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg3)"/>
+  <text x="64" y="68" fill="#f1f7fb" font-family="Inter,Segoe UI,sans-serif" font-size="31" font-weight="700">Enterprise application support</text>
+  <text x="64" y="102" fill="#88a5bd" font-family="Inter,Segoe UI,sans-serif" font-size="17">Linux · Apache Tomcat · Docker · LDAP / Active Directory · Bash</text>
+  <rect x="55" y="158" width="1170" height="466" rx="28" fill="#081a2d" stroke="#2a7195" stroke-width="2"/>
+  <g font-family="Inter,Segoe UI,sans-serif">
+    <rect x="92" y="285" width="190" height="118" rx="18" fill="url(#n3)" stroke="#4ad7e8"/>
+    <text x="187" y="328" text-anchor="middle" fill="#eaf4f8" font-size="17" font-weight="700">Corporate users</text>
+    <text x="187" y="357" text-anchor="middle" fill="#94adbf" font-size="13">web access</text>
+    <text x="187" y="379" text-anchor="middle" fill="#94adbf" font-size="13">enterprise workflows</text>
+
+    <rect x="375" y="185" width="245" height="118" rx="18" fill="url(#n3)" stroke="#7c8cff"/>
+    <text x="497" y="228" text-anchor="middle" fill="#c4c9ff" font-size="17" font-weight="700">Active Directory</text>
+    <text x="497" y="257" text-anchor="middle" fill="#9eadd0" font-size="13">LDAP authentication</text>
+    <text x="497" y="280" text-anchor="middle" fill="#9eadd0" font-size="13">users · groups · access</text>
+
+    <rect x="375" y="371" width="245" height="174" rx="18" fill="url(#n3)" stroke="#5eead4"/>
+    <text x="497" y="411" text-anchor="middle" fill="#8ff3e5" font-size="17" font-weight="700">Linux host</text>
+    <text x="497" y="440" text-anchor="middle" fill="#b9cbd7" font-size="13">services · permissions · systemd</text>
+    <rect x="407" y="469" width="181" height="48" rx="10" fill="#135d73"/>
+    <text x="497" y="499" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">Apache Tomcat</text>
+
+    <rect x="716" y="214" width="235" height="126" rx="18" fill="url(#n3)" stroke="#4ad7e8"/>
+    <text x="833" y="255" text-anchor="middle" fill="#eaf4f8" font-size="17" font-weight="700">Enterprise apps</text>
+    <text x="833" y="284" text-anchor="middle" fill="#94adbf" font-size="13">configuration · deployment</text>
+    <text x="833" y="307" text-anchor="middle" fill="#94adbf" font-size="13">integration endpoints</text>
+
+    <rect x="716" y="406" width="235" height="126" rx="18" fill="url(#n3)" stroke="#2494b3"/>
+    <text x="833" y="447" text-anchor="middle" fill="#74dcec" font-size="17" font-weight="700">Docker initiative</text>
+    <text x="833" y="476" text-anchor="middle" fill="#94adbf" font-size="13">portable runtime</text>
+    <text x="833" y="499" text-anchor="middle" fill="#94adbf" font-size="13">repeatable environments</text>
+
+    <rect x="1029" y="285" width="160" height="118" rx="18" fill="url(#n3)" stroke="#f5b444"/>
+    <text x="1109" y="327" text-anchor="middle" fill="#ffd27a" font-size="17" font-weight="700">Diagnostics</text>
+    <text x="1109" y="356" text-anchor="middle" fill="#aebdca" font-size="13">CLI · logs · Bash</text>
+    <text x="1109" y="379" text-anchor="middle" fill="#aebdca" font-size="13">documentation</text>
+  </g>
+  <g fill="none" stroke="#5eead4" stroke-width="3" marker-end="url(#a3)"><path d="M282 344H375"/><path d="M620 438H716"/><path d="M951 344H1029"/></g>
+  <path d="M497 303V371" stroke="#7c8cff" stroke-width="3" marker-end="url(#a3)"/>
+  <path d="M620 438C660 438 664 278 716 278" fill="none" stroke="#5eead4" stroke-width="3" marker-end="url(#a3)"/>
+  <text x="64" y="673" fill="#728da4" font-family="Inter,Segoe UI,sans-serif" font-size="14">Professional case summary · code, customer data and internal configurations remain private</text>
+</svg>

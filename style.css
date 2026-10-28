@@ -977,6 +977,23 @@ h3 {
   box-shadow: 0 0 9px rgba(245, 180, 68, 0.78);
 }
 
+.status-private {
+  color: #b45f06;
+  background: rgba(245, 180, 68, 0.12);
+  border-color: rgba(245, 180, 68, 0.28);
+}
+
+:root[data-theme="dark"] .status-private {
+  color: #f6d58a;
+}
+
+.confidential-note {
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
 .project-highlights {
   display: flex;
   flex-wrap: wrap;

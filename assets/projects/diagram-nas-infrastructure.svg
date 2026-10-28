@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Infraestructura NAS y red local</title>
+  <desc id="desc">Una red local conecta estaciones de trabajo, almacenamiento NAS Synology y cámaras IP mediante un switch y un router, con inventario y validación de conectividad.</desc>
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#061426"/><stop offset="1" stop-color="#0c2841"/></linearGradient>
+    <linearGradient id="n4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#153853"/><stop offset="1" stop-color="#0c2237"/></linearGradient>
+    <marker id="a4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L8 3L0 6Z" fill="#5eead4"/></marker>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg4)"/>
+  <text x="64" y="68" fill="#f1f7fb" font-family="Inter,Segoe UI,sans-serif" font-size="31" font-weight="700">NAS and local network implementation</text>
+  <text x="64" y="102" fill="#88a5bd" font-family="Inter,Segoe UI,sans-serif" font-size="17">Centralized storage · connectivity · inventory · IP cameras</text>
+  <rect x="55" y="155" width="1170" height="475" rx="28" fill="#081b2e" stroke="#2b7599" stroke-width="2"/>
+  <g font-family="Inter,Segoe UI,sans-serif">
+    <rect x="94" y="289" width="174" height="112" rx="18" fill="url(#n4)" stroke="#4ad7e8"/>
+    <text x="181" y="330" text-anchor="middle" fill="#e9f4f8" font-size="17" font-weight="700">Internet / WAN</text>
+    <text x="181" y="359" text-anchor="middle" fill="#92aebf" font-size="13">router · addressing</text>
+    <text x="181" y="382" text-anchor="middle" fill="#92aebf" font-size="13">device connectivity</text>
+
+    <rect x="360" y="289" width="188" height="112" rx="18" fill="url(#n4)" stroke="#5eead4"/>
+    <text x="454" y="330" text-anchor="middle" fill="#8ff3e5" font-size="17" font-weight="700">LAN switch</text>
+    <text x="454" y="359" text-anchor="middle" fill="#9bb5c6" font-size="13">network nodes</text>
+    <text x="454" y="382" text-anchor="middle" fill="#9bb5c6" font-size="13">validation + inventory</text>
+
+    <rect x="660" y="190" width="224" height="143" rx="18" fill="url(#n4)" stroke="#f5b444"/>
+    <text x="772" y="232" text-anchor="middle" fill="#ffd27a" font-size="19" font-weight="700">Synology NAS</text>
+    <text x="772" y="262" text-anchor="middle" fill="#bccbd5" font-size="13">centralized storage</text>
+    <text x="772" y="286" text-anchor="middle" fill="#9bb0bf" font-size="12">shared access · organization</text>
+    <text x="772" y="308" text-anchor="middle" fill="#9bb0bf" font-size="12">business files</text>
+
+    <rect x="660" y="380" width="224" height="143" rx="18" fill="url(#n4)" stroke="#7c8cff"/>
+    <text x="772" y="422" text-anchor="middle" fill="#c5caff" font-size="18" font-weight="700">Workstations</text>
+    <text x="772" y="452" text-anchor="middle" fill="#a9b7d4" font-size="13">users · equipment</text>
+    <text x="772" y="476" text-anchor="middle" fill="#95a8bf" font-size="12">connectivity + support</text>
+    <text x="772" y="498" text-anchor="middle" fill="#95a8bf" font-size="12">hardware inventory</text>
+
+    <rect x="1000" y="289" width="178" height="112" rx="18" fill="url(#n4)" stroke="#4ad7e8"/>
+    <text x="1089" y="330" text-anchor="middle" fill="#e9f4f8" font-size="17" font-weight="700">IP cameras</text>
+    <text x="1089" y="359" text-anchor="middle" fill="#92aebf" font-size="13">configuration</text>
+    <text x="1089" y="382" text-anchor="middle" fill="#92aebf" font-size="13">network access</text>
+  </g>
+  <g fill="none" stroke="#5eead4" stroke-width="3" marker-end="url(#a4)"><path d="M268 345H360"/><path d="M548 345C610 345 610 261 660 261"/><path d="M548 345C610 345 610 451 660 451"/><path d="M884 261C950 261 950 345 1000 345"/></g>
+  <path d="M884 451C950 451 950 365 1000 365" fill="none" stroke="#7c8cff" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="64" y="676" fill="#728da4" font-family="Inter,Segoe UI,sans-serif" font-size="14">Freelance case · construction-sector client · no customer identifiers or internal network details published</text>
+</svg>
