@@ -1,0 +1,9 @@
+{
+  "name": "amateos-cloud-devops-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portafolio profesional de Andrés Mateos enfocado en Cloud y DevOps.",
+  "scripts": {
+    "check": "node --check script.js && node scripts/validate-site.mjs"
+  }
+}
